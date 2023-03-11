@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/bleddyna/entrainement_ECF.git/static/css/main.073c9b0a.css",
+    "main.js": "/bleddyna/entrainement_ECF.git/static/js/main.bddd2b6f.js",
+    "static/js/787.e6ad748c.chunk.js": "/bleddyna/entrainement_ECF.git/static/js/787.e6ad748c.chunk.js",
+    "static/media/logo.svg": "/bleddyna/entrainement_ECF.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/bleddyna/entrainement_ECF.git/index.html",
+    "main.073c9b0a.css.map": "/bleddyna/entrainement_ECF.git/static/css/main.073c9b0a.css.map",
+    "main.bddd2b6f.js.map": "/bleddyna/entrainement_ECF.git/static/js/main.bddd2b6f.js.map",
+    "787.e6ad748c.chunk.js.map": "/bleddyna/entrainement_ECF.git/static/js/787.e6ad748c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.bddd2b6f.js"
+  ]
+}

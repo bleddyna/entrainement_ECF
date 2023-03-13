@@ -10,7 +10,6 @@ import { Price } from './Components/Price';
 function App() {
   return (
     <div>
-      <h1>Charles CANTIN</h1>
       <Header />
       <BrowserRouter>
         <Routes>

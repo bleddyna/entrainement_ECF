@@ -83,9 +83,36 @@ header nav ul li a:active {
     color: var(--framboise);
 }
 
+i {
+    display: none;
+}
+
 @media all and (max-width:480px) {
+    header {
+        background: none;
+    }
+
     header nav ul {
         display: none;
+    }
+
+    .bars-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #EB455F;
+        height: 35px;
+        width: 35px;
+        padding: 2px;
+    }
+
+    .bars-container span {
+        height: 2px;
+        width: 100%;
+        background-color: #BAD7E9;
+        top: 20px;
+        left: 0;
+        position: absolute;
     }
 }
 
@@ -95,6 +122,7 @@ header nav ul li a:active {
     width: 100vw;
     background: url("../annexe/images/photographe.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

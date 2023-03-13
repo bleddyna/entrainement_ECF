@@ -11,6 +11,9 @@ export const Header = () => {
                     <li><a href="/Tarifs_et_Prestations">Tarifs et préstations</a></li>
                     <li><a href="/Contact">Contact</a></li>
                 </ul>
+                <div className="bars-container">
+                    <span></span>
+                </div>
             </nav>
         </header>
     )

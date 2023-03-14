@@ -6,6 +6,14 @@
     --beige: #FCFFE7;
     --light-blue: #BAD7E9;
     --dark-blue: #2B3467;
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height)*3 + var(--hamburger-gap)*2);
+    --foreground: #333;
+    --background: white;
 }
 
 * {
@@ -41,99 +49,118 @@ a {
 
 /*HEADER*/
 header {
+    height: 10vh;
     width: 100vw;
-    height: 5vh;
-    background-color: var(--beige);
+    background-color: var(--dark-blue);
 }
 
-nav ul {
+.hamburger-menu {
+    display: none;
+}
+
+.sidebar nav ul {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 1.5vh;
+    height: 5vh;
+    padding: 0 5vw;
+    transition: all var(--animation-timing);
 }
 
-header nav ul li a {
-    color: var(--dark-blue);
-    position: relative;
-    transition: all .35s;
-}
-
-header nav ul li a::after {
-    position: absolute;
-    content: "";
-    top: 95%;
-    left: 0;
-    width: 0;
-    height: 5%;
-    background: var(--framboise);
-    transition: all .35s;
-}
-
-header nav ul li a:hover::after {
-    width: 100%;
-}
-
-header nav ul li a:hover {
-    color: var(--light-blue);
-}
-
-header nav ul li a:active {
+.sidebar nav ul li a:hover {
     color: var(--framboise);
+    font-weight: bold;
 }
 
-i {
-    display: none;
+.sidebar a {
+    color: var(--light-blue);
+    letter-spacing: 4px;
 }
 
 @media all and (max-width:480px) {
     header {
-        background: none;
+        background-color: transparent;
     }
 
-    header nav ul {
-        display: none;
-    }
-
-    .bars-container {
+    .hamburger-menu {
+        --x-width: calc(var(--hamburger-height)*1.41421356237);
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
         position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #EB455F;
-        height: 35px;
-        width: 35px;
-        padding: 2px;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 5;
+        cursor: pointer;
     }
 
-    .bars-container span {
-        height: 2px;
-        width: 100%;
-        background-color: #BAD7E9;
-        top: 20px;
-        left: 0;
-        position: absolute;
+    .hamburger-menu:has(input:checked) {
+        --foreground: white;
+        --background: #333;
+        z-index: 45;
     }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), transform var(--animation-timing), width var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu:has(input:checked)::before {
+        transform: rotate(45deg);
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height)/-2);
+    }
+
+    .hamburger-menu:has(input:checked)::after {
+        transform: rotate(-45deg);
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height)/2);
+    }
+
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    .sidebar {
+        transition: transform var(--animation-timing);
+        transform: translate(-100%);
+        padding: 0.5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        max-width: 10rem;
+        min-height: 100vh;
+    }
+
+    .hamburger-menu:has(input:checked)+.sidebar {
+        transform: translate(0);
+    }
+
+    .sidebar a {
+        color: var(--light-blue);
+    }
+
 }
 
 /*HOME PAGE*/
-.home {
-    height: 100vh;
-    width: 100vw;
-    background: url("../annexe/images/photographe.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home h1 {
-    color: var(--light-blue);
-    text-shadow: var(--dark-blue) 1px 0 10px;
-    font-size: 5.9vw;
-}
-
 /*GALERY PAGE*/
 /*PRICE PAGE*/
 /*CONTACT PAGE*/

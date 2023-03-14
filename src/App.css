@@ -78,9 +78,26 @@ header {
     letter-spacing: 4px;
 }
 
+.sidebar h1 {
+    display: none;
+}
+
 @media all and (max-width:480px) {
     header {
         background-color: transparent;
+        height: 100vh;
+        background: url('../annexe/images/photographe.jpg');
+        background-size: cover;
+    }
+
+    header h1 {
+        color: var(--framboise);
+        text-shadow: 4px 3px 7px var(--light-blue);
+        font-size: 10vw;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: auto;
     }
 
     .hamburger-menu {
@@ -94,12 +111,13 @@ header {
         left: var(--hamburger-margin);
         z-index: 5;
         cursor: pointer;
+        position: absolute;
     }
 
     .hamburger-menu:has(input:checked) {
         --foreground: white;
         --background: #333;
-        z-index: 45;
+        z-index: 5;
     }
 
     .hamburger-menu::before,
@@ -146,8 +164,9 @@ header {
         padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
         background-color: var(--foreground);
         color: var(--background);
-        max-width: 10rem;
-        min-height: 100vh;
+        max-width: 100vw;
+        min-height: 100%;
+        z-index: 15;
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {
@@ -158,9 +177,41 @@ header {
         color: var(--light-blue);
     }
 
+    .sidebar nav ul {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar nav ul li {
+        margin: 5px 0;
+    }
+
 }
 
 /*HOME PAGE*/
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('../annexe/images/photographe.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home h1 {
+    color: var(--framboise);
+    text-shadow: 4px 3px 7px var(--light-blue);
+    font-size: 5.9vw;
+}
+
+@media all and (max-width:480px) {
+    .home h1 {
+        display: none;
+    }
+}
+
 /*GALERY PAGE*/
 /*PRICE PAGE*/
 /*CONTACT PAGE*/

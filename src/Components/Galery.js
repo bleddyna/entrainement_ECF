@@ -29,3 +29,4 @@ export const Galery = () => {
         </ul>
     )
 }
+export default Galery;

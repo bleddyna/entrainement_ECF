@@ -7,4 +7,7 @@
 # 13/03 21:36 -> reprise
 # 13/03 22:40-> fin de journée
 # 14/03 17:31 -> début de la troisieme journée
-# 14/03 17:31 -> pause
+# 14/03 19:35 -> pause
+# 14/03 21:38 -> reprise
+# 14/03 22:00 -> recherche pour le formulaire de contact
+# 14/03 22:44 -> fin de journée

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Contact } from './Components/Contact';
-import { Galery } from './Components/Galery';
-import { Header } from './Components/Header';
-import { Home } from './Components/Home';
-import { Price } from './Components/Price';
+import Contact from './Components/Contact';
+import Galery from './Components/Galery';
+import Header from './Components/Header';
+import Home from './Components/Home';
+import Price from './Components/Price';
 
 function App() {
   return (

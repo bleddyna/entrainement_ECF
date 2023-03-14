@@ -8,6 +8,8 @@ export const Header = () => {
                 <input type="checkbox" />
             </label>
             <aside className='sidebar'>
+
+                <h1>Charles Cantin - Photographe</h1>
                 <nav>
                     <ul>
                         <li><a href='/'>Home</a></li>
@@ -20,3 +22,4 @@ export const Header = () => {
         </header>
     )
 }
+export default Header;

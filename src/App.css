@@ -61,12 +61,12 @@ a {
     margin: 0 30px;
 }
 
-.navbar .nav-links ul li.active a {
-    color: var(--dark-blue);
+.active {
+    color: var(--dark-blue) !important;
     font-weight: 800;
 }
 
-.navbar .hamburger-menu {
+.navbar .menu-hamburger {
     display: none;
     position: absolute;
     top: 50px;
@@ -75,16 +75,16 @@ a {
     width: 35px;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:425px) {
     .navbar {
         padding: 0;
     }
 
-    .navbar .hamburger-menu {
+    .navbar .menu-hamburger {
         display: block;
+        background: url(../annexe/images/bouton-menu.png);
+        border: none;
     }
-
-
 
     .nav-links {
         position: absolute;
@@ -97,11 +97,12 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: -100%;
         transition: all 0.9s ease;
     }
 
     .mobile-menu {
-        margin-bottom: -100%;
+        margin-left: 0;
     }
 
     .nav-links ul {

@@ -1,7 +1,13 @@
 import React from 'react'
-
+    ;
 
 export const Header = () => {
+    const navLink = document.querySelector('.nav-links');
+
+    const handleClick = () => {
+        navLink.classList.toggle('mobile-menu')
+    }
+
     return (
         <nav className="navbar">
             <div className="nav-links">
@@ -20,7 +26,7 @@ export const Header = () => {
                     </li>
                 </ul>
             </div>
-            <img src='../annexe/images/menu-btn.png' alt='bouton menu' className='menu-hamburger' />
+            <button onClick={handleClick} className='hamburger-menu'><span></span></button>
         </nav>
     )
 }

@@ -66,11 +66,12 @@ a {
     font-weight: 800;
 }
 
-.navbar .menu-hamburger {
+.navbar .hamburger-menu {
     display: none;
     position: absolute;
     top: 50px;
     right: 50px;
+    height: 35px;
     width: 35px;
 }
 
@@ -79,9 +80,11 @@ a {
         padding: 0;
     }
 
-    .navbar .menu-hamburger {
+    .navbar .hamburger-menu {
         display: block;
     }
+
+
 
     .nav-links {
         position: absolute;
@@ -94,6 +97,11 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.9s ease;
+    }
+
+    .mobile-menu {
+        margin-bottom: -100%;
     }
 
     .nav-links ul {

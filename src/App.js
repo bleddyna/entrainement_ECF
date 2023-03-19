@@ -7,7 +7,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Price from './Components/Price';
 
-function App() {
+const App = () => {
   return (
     <div>
       <Header />

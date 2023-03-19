@@ -1,32 +1,28 @@
 import React from 'react';
+const Header = () => {
 
-export const Header = () => {
-    const navLinks = document.querySelector(".nav-links")
-
-    const handleClick = () => {
-        navLinks.classList.toggle('mobile-menu')
-
-    };
     return (
         <nav className="navbar">
-            <div className="nav-links">
-                <ul>
-                    <li >
-                        <a href="/" className={'active'}>Home</a>
-                    </li>
-                    <li>
-                        <a href="/Galerie" >Galery</a>
-                    </li>
-                    <li>
-                        <a href="/Tarifs_et_Prestations" >Price</a>
-                    </li>
-                    <li>
-                        <a href="/Contact" >Contact</a>
-                    </li>
-                </ul>
+            <div className="container">
+                <div className="nav-elements">
+                    <ul className='menu'>
+                        <li className='active' >
+                            <a href="/" className='nav-link'>Accueil</a>
+                        </li>
+                        <li>
+                            <a href="/Galerie" className='nav-link' >Galerie</a>
+                        </li>
+                        <li>
+                            <a href="/Tarifs_et_Prestations" className='nav-link' >tarifs et prestations</a>
+                        </li>
+                        <li>
+                            <a href="/Contact" className='nav-link' >Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <button onClick={handleClick} className='menu-hamburger'></button>
         </nav>
     )
+
 }
-export default Header;
+export default Header

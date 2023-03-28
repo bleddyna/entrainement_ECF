@@ -1,25 +1,33 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 const Header = () => {
-
     return (
         <nav className="navbar">
-            <div className="container">
-                <div className="nav-elements">
-                    <ul className='menu'>
-                        <li className='active' >
-                            <a href="/" className='nav-link'>Accueil</a>
-                        </li>
-                        <li>
-                            <a href="/Galerie" className='nav-link' >Galerie</a>
-                        </li>
-                        <li>
-                            <a href="/Tarifs_et_Prestations" className='nav-link' >tarifs et prestations</a>
-                        </li>
-                        <li>
-                            <a href="/Contact" className='nav-link' >Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <div className='menu'>
+                <NavLink to="/messages"
+                    className={({ isActive }) =>
+                        isActive ? "active" : "pending"
+                    }>
+                    Accueil
+                </NavLink>
+                <NavLink to="/Galerie"
+                    className={({ isActive }) =>
+                        isActive ? "active" : "pending"
+                    }>
+                    Galerie
+                </NavLink>
+                <NavLink to="/Tarifs_et_Prestations"
+                    className={({ isActive }) =>
+                        isActive ? "active" : "pending"
+                    }>
+                    Présations
+                </NavLink>
+                <NavLink to="/Contact"
+                    className={({ isActive }) =>
+                        isActive ? "active" : "pending"
+                    }>
+                    Contact
+                </NavLink>
             </div>
         </nav>
     )
